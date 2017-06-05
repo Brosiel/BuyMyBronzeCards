@@ -1,0 +1,16 @@
+var searchParameters = new PlayerSearchParameters
+{
+    Page = 1,
+    Level = Level.Gold,
+    ChemistryStyle = ChemistryStyle.Sniper,
+    League = League.BarclaysPremierLeague,
+    Nation = Nation.Norway,
+    Position = Position.Striker,
+    Team = Team.ManchesterUnited
+};
+
+var searchResponse = await client.SearchAsync(searchParameters);
+foreach (var auctionInfo in searchResponse.AuctionInfo)
+{
+	// Handle auction data
+}
